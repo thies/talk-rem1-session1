@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Discussion</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="tweaks.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown data-background-image="imgs/discussion/scyscraper-nyc.png">
+					<textarea data-template>
+						## Discussion<span class="subtitle"><br/>&ldquo;View and status determinants of residential vertical price gradients:<br />A comparative study of Manhattan and Rotterdam&rdquo;</span>
+						Note:
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Contribution<span class="subtitle"><br/>What drives demand for height?</span>
+						* Is it the view or the status?
+						* Excellent data wrangling
+						* Comparison: Rotterdam and New York
+						Note:
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Data <span class="subtitle"><br/>How far can a tenant see from their window?</span>
+						<img src='imgs/discussion/los1.png' height=450>
+						Note:
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Data <span class="subtitle"><br/>Exact location of unit within the building</span>
+						<img src='imgs/discussion/los2.png' height=450>
+						Note:
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Data <span class="subtitle"><br/>Viewshed Analysis</span>
+						<img src='imgs/discussion/los3.png' height=450>
+
+						* <a href='https://doi.org/10.1068/b32116
+'>"Modeling the Value of View in High-Rise Apartments: A 3D GIS Approach"</a>, Shi-Ming Yu, Sun-Sheng Han, Chee-Hian Chai (2007
+						Note:
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						## Vertical Price Gradient<span class="subtitle"><br/>Manhattan</span>
+						<img src='imgs/discussion/gradient-nyc.png'>
+						Note:
+						* "the weak non-monotonic vertical price gradient of residential towers in Rotterdam is mainly due to local idiosyncrasies.							- "
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Vertical Price Gradient<span class="subtitle"><br/>Rotterdam</span>
+						<img src='imgs/discussion/gradient-rotterdam.png'>
+						Note:
+						* "the weak non-monotonic vertical price gradient of residential towers in Rotterdam is mainly due to local idiosyncrasies."
+						* Other factors: "Public Transport, Noise Complaints, and Housing: Evidence from Sentiment Analysis in Singapore", Yi Fan, Ho Pin Teo, Wayne X. Wan, *Journal of Regional Science* (2021). DOI: 10.1111/jors.12524.
+
+					</textarea>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				transition: 'none',
+				width: 1244,
+				height: 700,
+				margin: 0.1,
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
