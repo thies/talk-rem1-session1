@@ -181,6 +181,7 @@
 				</textarea>
 			</section>
 
+			<section>
 			<section data-markdown >
 				<textarea data-template>
 					## Decision rules <span class="subtitle"><br/>Alternatives to NPV?</span>
@@ -196,8 +197,6 @@
 				</textarea>
 			</section>
 
-
-
 				<section data-markdown >
 					<textarea data-template>
 					## NPV for all? <span class="subtitle"><br/>RE comes in many flavours. NPV and IRR not great for optionality.</span>
@@ -208,7 +207,7 @@
 
 				</textarea>
 				</section>
-
+</section>
 
 			<section data-markdown >
 				<textarea data-template>
@@ -247,18 +246,18 @@
 			</section>
 			<section data-markdown >
 				<textarea data-template>
-				## Determining Project Value<span class="subtitle"><br/>Three approaches &mdash; from fundamentally different angles.</span>
+				## Determining Value<span class="subtitle"><br/>Three approaches&mdash;from fundamentally different angles.</span>
 
-				* Discounted cash flows
-				* Comparables
-				* Accounting based
+				1. Discounted cash flows
+				2. Comparables
+				3. Accounting based
 
 				</textarea>
 			</section>
 
 			<section data-markdown >
 				<textarea data-template>
-				## Discounted Cashflows <span class="subtitle"><br/>Value is sum of future cashflows, discounted back to today.</span>
+				## 1. Discounted Cashflows <span class="subtitle"><br/>Value is sum of future cashflows, discounted back to today.</span>
 				`$$ V_0 = \sum^\infty_{t=1} \frac{CF_t}{(1+r_t)^t} $$`
 
 				* Easy! You have done this before.
@@ -270,23 +269,18 @@
 
 			<section data-markdown >-
 				<textarea data-template>
-				## Cash flows<span class="subtitle"><br/>Basic DCF models for equity, growing perpetuity.</span>
-				* If we assume that CF is an increasing perpetuity,
+				## From Cash Flows to Values<span class="subtitle"><br/>Basic valuation for equities: Dividend discount model / Gordon growth model</span>
+				* If we assume that CFs are an increasing perpetuity,
 					- and <emph>g</emph> is the long-run average growth rate and <emph>r</emph> is the required return for equity holders,
-					- then `$ \small V_0 = \sum^{\infty}_{t=1}D_t(1+r)^{-t} $`
-					- simplifies to `$ \small V = \frac{D_1}{r-g}$`.
-					- (Dividend discount model / Gordon growth model)
-				* Problems
-					- While the (dividend) yield (d = r-g), is observable (d = D<sub>1</sub>/P), how do we estimate r and g?
-					- g might change over life of firm.
-					- Re-investment at same rate not always possible (typically declining returns).
+				* then `$ \small V_0 = \sum^{\infty}_{t=1}D_t(1+r)^{-t} $`,
+				* which simplifies to `$ \small V = \frac{D_1}{r-g}$`.
 
 				</textarea>
 			</section>
 
 			<section data-markdown >
 				<textarea data-template>
-				## CF Private Real Estate <span class="subtitle"><br/></span>
+				## Are Cash flows smoothly increasing?<span class="subtitle"><br/></span>
 				* Bond-like characteristics
 					- Lease contracts: defined rent and defined maturity?
 				* Equity-like characteristics
@@ -299,18 +293,30 @@
 
 			<section data-markdown >
 				<textarea data-template>
-				## Large Transaction costs <span class="subtitle"><br/>Round trip transaction costs as high as 7-8% for commercial RE (Collet, Lizieri & Ward, 2003)</span>
+				## Transaction costs <span class="subtitle"><br/>Large market frictions (at least for private real estate) </span>
 
-				* High round trip transaction costs
+				* Round trip transaction costs as high as 7–8% for commercial RE (Collet, Lizieri & Ward, 2003)
+				* Incorporate direct transaction costs into cash flow predictions
 					- Marketing and search costs
 					- Legal and other professional fees
 					- Property taxes/stamp duties
 
-				* Directly incorporate into cash flow predictions
-
-				* Cannot readily trade in and out of property. Long holding periods. Liquidity risk.
+				* Indirect transaction costs
+					- Cannot readily trade in and out of property. Liquidity risk.
+					- Reflect in required rate of return for exit value
 
 			</textarea>
+			</section>
+
+			<section data-markdown >-
+				<textarea data-template>
+				## Denominator `$ \small V = \frac{D_1}{k} = \frac{D_1}{r-g}$`
+				* The yield is observable (k = D<sub>1</sub>/P), but not constant in time (e.g., Amsterdam gross yields)
+				<img src="imgs/rent_price_amsterdam.png" height=300>
+				* Decompose k into required return and growth and model individually
+					- g might change over life of firm
+					- Re-investment at same rate not always possible (typically declining returns)
+				</textarea>
 			</section>
 
 
@@ -318,13 +324,16 @@
 				<textarea data-template>
 				## Normative view on r<span class="subtitle"><br/>What might be the correct discount rate?</span>
 
-				* Discount rate reflects time value of money &ndash; reward for giving up capital.
-				* Compensation for risk
+				* Discount rate reflects
+					- time value of money—reward for giving up capital,
+					- and compensation for risk.
 				* Fisher model of interest rates
-					- Interest = Impatience + Anticipated Inflation + Risk = Risk Free Rate (RFR) + Risk Premium (RP)
+					- Interest (r) = Impatience + Anticipated Inflation + Risk
+					- r = Risk Free Rate (RFR) + Risk Premium (RP)
 					- RFR: From govenment debt?
 					- RP depends on the variability of economic and financial drivers and "price of risk"
-				* Account for depreciation of the asset in CF or r? Both possible.
+				* Real assets: depreciation?
+					- Account for depreciation in CF or r? Both possible.
 
 				</textarea>
 			</section>
@@ -457,15 +466,19 @@
 
 			<section data-markdown >
 				<textarea data-template>
-				## Netherlands?<span class="subtitle"><br/>In the long run... real prices are flat!</span>
-				* Amsterdam, 1650-2005 (Eichholtz, 1997)
-				<img src="imgs/amsterdam.png" height=400>
+				## Netherlands?<span class="subtitle"><br/>In the very long run... real prices are flat!</span>
+
+				<div class="figure">
+					<p class="title">Amsterdam Property Prices, 1650–2005</p>
+					<p><img src="imgs/amsterdam.png" height=400></p>
+					<p class="source">Source: Eichholtz (1997)</p>
+				</div>
 				</textarea>
 			</section>
 
 			<section data-markdown data-background-image="imgs/herengracht1.jpg">
 				<textarea data-template>
-				## Prime location<span class="subtitle"><br/>In 1672 &ndash; and today.</span>
+				## Prime location<span class="subtitle"><br/>In 1672—and today.</span>
 				<p class="source">Gerrit Adriaenszoon Berckheyde: Herengracht, Amsterdam, 1672</a>
 					<p>&nbsp;</p>
 					<p>&nbsp;</p>
@@ -490,10 +503,12 @@
 			<section data-markdown >
 				<textarea data-template>
 				## Depreciation<span class="subtitle"><br/>More than just a constant factor.</span>
-				* Depreciation in US Commercial &amp; Multi-Family Properties (Bokhari &amp; Geltner, 2016)
 
-				<img src="imgs/depreciation.png" height=380>
-
+				<div class="figure">
+					<p class="title">Depreciation in US Commercial &amp; Multi-Family Properties</p>
+					<p><img src="imgs/depreciation.png" height=380></p>
+					<p class='source'>Source: Bokhari &amp; Geltner (2016)</p>
+				</div>
 				</textarea>
 			</section>
 
@@ -564,8 +579,8 @@
 
 			<section data-markdown >
 				<textarea data-template>
-				## Complex investments?<span class="subtitle"><br/> For basic projects, DCF is doable. <br/>But what about more complex cases: mortgage backed securities?</span>
-
+				## Limits of DCF<span class="subtitle"><br/>For basic projects, DCF is feasible.</span>
+				* But what about more complex cases? Waterfall structures/mortgage backed securities/options/...?
 				<div class='figure'>
 					<img src="imgs/mbs.png" height=400>
 				</div>
@@ -573,6 +588,22 @@
 			</section>
 
 
+			<section>
+			<section data-markdown >
+				<textarea data-template>
+					## Summing up<span class="subtitle"><br/>Valuation: DCF it is (in most cases). </span>
+
+					* Decompose yields: Forecast individual components (RFR, RP, g, &delta;) to arrive at discount rate.
+
+					* g is probably smaller than your first guess...
+
+					* RP is difficult to estimate. And volatile.
+
+					* &delta; needs more attention &ndash; not just an afterthought.
+
+					* Justify your assumptions, always. Sensitivity analysis?
+				</textarea>
+			</section>
 
 			<section data-markdown >
 				<textarea data-template>
@@ -581,15 +612,21 @@
 				* City: "Prime yields softened towards the end of the quarter to stand at 4.00%." (JLL Market report, Q2 2022)
 				</textarea>
 			</section>
-
+		</section>
 
 			<section data-markdown >
 				<textarea data-template>
-				## True comparables?<span class="subtitle"><br/>How many? Adjust for difference in time and quality?</span>
-				<img src="imgs/gherkin.png" height="350">
-				<p style="line-height: 1.2em; font-size:0.6em;"><strong>JLL Market report, Q2 2022:</strong> <i>"In the West End, prime yields stand at 3.5%..."</i>
-			</p>
-				</textarea>
+				## 2: Valuation using comparables<span class="subtitle"><br/>Assumption: Value based on observed market outcomes.</span>
+
+				* Not normative: Assumes that the market values assets efficiently. Use comparable transactions to find value of property
+					- How many comparables are needed to eliminate deal-specific noise?
+					- Are comparables really comparable? Adjust for difference in time and quality?
+
+				<div class="figure">
+				<img src="imgs/gherkin.png" height=350>
+				</div>
+
+			</textarea>
 			</section>
 
 			<section data-markdown >
@@ -605,7 +642,7 @@
 				* Trade-off: Number of observations vs. time and location focus
 				* Uncertainty: What is the “right” specification?
 				* Fundamental challenge: Is the market value the “true” value?
-					- Geltner & Goetzmann (2000): 7%-15% noise in individual NCREIF transactions
+					- Geltner & Goetzmann (2000): 7–15% noise in individual NCREIF transactions
 				</textarea>
 			</section>
 
@@ -623,27 +660,167 @@
 					## Really different?<span class="subtitle"><br/>Or just two sides of the same coin?</span>
 					* DCF starts with asset-level cashflows—and then applies market-level discount rates
 					* The comparable approach sets off from market-level yields—and then uses comparables to find value of a single asset.
-					<img src="imgs/asset_market_loop.png" height="300">
+					<div class="figure">
+						<img src="imgs/asset_market_loop.png" height="300">
+					</div>
 					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+					## Traditional valuation (I)<span class="subtitle"><br/>Can we reduce uncertainty by making fewer assumptions?</span>
+
+					* Both numerator and denominator are all in expectations—not certain!
+						- income growth, vacancies, capex make cash flow predictions difficult.
+						- discount rate: RFR + RP – g + d.
+
+					* Basic freehold valuation, based on income: V = Current Rent / ARY
+						- Current rent instead of uncertain future cash flows
+						- ARY or Cap Rate observed from comparables (trust the market!)
+						- Everything is in the yield—after all, it is the “All Risks” yield
+					* We <strong>know</strong> current rent and just have to get <strong>one</strong> parameter—ARY—right. This MUST be more reliable?
+
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Traditional valuation (II)<span class="subtitle"><br/>"Term and Reversion"</span>
+
+					* Long lease contracts, with rent revisions at e.g. 3–5 year intervals
+					* Example: office building, last rent revision 1 year ago, next in 2 years
+						- passing (current) rent: 10,000. Rent grew by 5% last year, trend expected to continue...
+						- ARY, from newly let comparables: 4%
+					* Passing rent $<$ market rent, will revert to market rent in 2 years
+					 	- $ \small 10,000 \times 1.05^3 = 11,576 $
+					* CF in term are certain, reversion not. Adjust discount rate to reflect that? 3.75% for term, 4.25% for reversion?
+					<table>
+						<tr>
+								<td>Year<td>
+								<td>1<td>
+								<td>2<td>
+								<td>3<td>
+								<td>...<td>
+						</tr>
+						<tr>
+								<td>Rent<td>
+								<td>10,000<td>
+								<td>10,000<td>
+								<td>11,576<td>
+								<td>...<td>
+						</tr>
+						<tr>
+								<td>Discount at<td>
+								<td>3.75%<td>
+								<td>3.75%<td>
+								<td>4.25%<td>
+								<td>...<td>
+						</tr>
+
+					</table>
+
+
+					</textarea>
+				</section>
+
+
+
+				<section data-background-image="imgs/rent_ledger.jpg">
+					<h2><span class="transparent70">3. Cost-based Valuation</span></h2>
+					<h3><span class="transparent70"><br/>Accountants to the rescue!</span></h3>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
-						## Summing up<span class="subtitle"><br/>Valuation: DCF it is (in most cases). </span>
-
-						* Decompose yields: Forecast individual components (RFR, RP, g, &delta;) to arrive at discount rate.
-
-						* g is probably smaller than your first guess...
-
-						* RP is difficult to estimate. And volatile.
-
-						* &delta; needs more attention &ndash; not just an afterthought.
-
-						* Justify your assumptions, always. Sensitivity analysis?
-
+					## Net Asset Value<span class="subtitle"><br/>An accountant's view of value.</span>
+					* For companies, the equity holders own the residual value
+						- The value of all assets less value of the debt
+						- Less any other stakeholder claims (e.g. tax)
+						- Less any costs of disposal
+					* This is the Net Asset Value (NAV) of the firm
+						- Shouldn’t NAV per share be the share price?
+						- What would happen if it weren’t?
+					* Luckily, property companies/REITs have a high percentage of fixed tangible assets, so NAV should be easy to calculate?
 
 					</textarea>
 				</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## Simplified example<span class="subtitle"><br/>NAV and property companies (adapted from Brett, "Property and Money")</span>
+									<div class="figure">
+										<img src="imgs/nav.png" height=450>
+									</div>
+									</textarea>
+								</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## NAV discounts: UK <span class="subtitle"><br/>Historically, UK property companies have traded at NAV discount.</span>
+									* Discount (Premium) = (Price - NAV) / NAV
+										- e.g. NAV = 300, Price = 225: (225-300)/300 = -25%<br>
+									<img src="imgs/nav_uk.png" height=430>
+									</textarea>
+								</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## Caused by smoothness?<span class="subtitle"><br/>NAV: Always one step behind? And smooth!</span>
+									* Can this explain structural NAV discounts? No.
+
+									<img src="imgs/nav_indices.png" height=430>
+									</textarea>
+								</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## Potential causes<span class="subtitle"><br/>We do not have a good explanation, yet.</span>
+									* What could lead to these deviations?
+										- Tax - particularly capital gains tax - liability (but REITs do not pay tax)
+										- Uncertainty as to true NAV
+										- Minority holdings & control, management costs
+										- Liquidity and loss on forced sale
+										- Risk: gearing and volatility; innovative capital structure
+										- Pricing inefficiencies? Is the market off?
+									</textarea>
+								</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## Geographic diversity<span class="subtitle"><br/>NAV discounts/premia in Europe</span>
+									* Is this a regulation story? Or valuation differences?
+
+									<img src="imgs/nav_countries.png" height=430>
+									</textarea>
+								</section>
+
+								<section data-markdown >
+									<textarea data-template>
+									## Time Dynamics<span class="subtitle"><br/>Shared turning points and trends. Distinct country-specific trends.</span>
+									* Ranking by NAV discount not constant.
+
+									<img src="imgs/nav_spaghetti.png" height=430>
+									</textarea>
+								</section>
+
+
+								<section data-markdown >
+									<textarea data-template>
+									## Residual Method<span class="subtitle"><br/>Land value, based on costs</span>
+
+									* Properties are sold as a bundle: Negotiated price is for both land and structure.
+									* In cities, undeveloped land is rarely sold.
+									* How much is land worth?
+									* Cost based approach: Land is the residual, transaction price &minus; replacement value of structure
+
+									* Pro: Easy to explain and to implement (if you have cost data).
+									* Con: Cost based, theoretical challenges (<a href="https://link.springer.com/article/10.1007/s11146-021-09834-4">Clapp, Cohen & Lindenthal, 2021</a>), negative land values possible...
+
+									</textarea>
+								</section>
+
 
 
 				<section data-markdown >
