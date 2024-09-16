@@ -27,7 +27,7 @@
 						<br /><a href="https://lindenthal.eu/">lindenthal.eu</a>
 						<br />
 						<br />
-						September 2023</p>
+						September 2024</p>
 				</section>
 
 
@@ -96,19 +96,6 @@
 				</textarea>
 			</section>
 
-			<section data-markdown >
-				<textarea data-template>
-					## Seminars<span class="subtitle"><br/>The newest research! Open to all.</span>
-
-					* American Real Estate and Urban Economics Association (AREUEA) Virtual Seminars
-						- https://www.areuea.org/virtual-seminar-series
-					* Cambridge Endowment of Research in Finance (CERF) seminars.
-						- https://www.cerf.cam.ac.uk/
-					* Cambridge Real Estate Seminars (a bit dormant)
-						- https://seminar.re
-
-				</textarea>
-			</section>
 
 			<section data-background-image="imgs/door.jpg" >
 
@@ -200,9 +187,106 @@
 				</textarea>
 			</section>
 
-			<section data-markdown >-
+
+			<section data-markdown >
 				<textarea data-template>
-				## From Cash Flows to Values<span class="subtitle"><br/>Basic valuation for equities: Dividend discount model / Gordon growth model</span>
+				## Proforma example
+
+				* Property Summary
+					- Property Type: Class A Office Building
+					- Location: Midtown Manhattan, New York City
+					- Building Size: 100,000 rentable square feet
+					- Number of Floors: 25
+					- Current Occupancy Rate: 95%
+					- Average Rental Rate: $85 per square foot per year
+				* Purchase Price: `$`80,000,000
+				* Financing: 3/4 debt (`$`60,000,000)
+				</textarea>
+			</section>
+
+
+			<section data-markdown >
+				<textarea data-template>
+				## Income Projections
+				1. Gross Potential Rent (GPR)
+					- Total Rentable Area × Average Rental Rate = 100,000 sq ft × `$`85/sq ft = `$`8,500,000
+				2. Vacancy (Assumed Rate: 5%)
+					- GPR × Vacancy Rate = `$`8,500,000 × 5% = `$`425,000
+				3. Effective Gross Income (EGI)
+					- GPR − Vacancy and Credit Losses = `$`8,500,000 − `$`425,000 = `$`8,075,000
+				4. Other Income
+					- Parking Revenue, Advertising and Signage Income, Miscellaneous Income: `$`275,000
+				5. Total Effective Gross Income (TEGI)
+					- EGI + Other Income = `$`8,075,000 + `$`275,000 = `$`8,350,000
+				</textarea>
+			</section>
+
+			<section data-markdown >
+				<textarea data-template>
+				## Operating Expenses
+
+				* Property Taxes, Insurance, Utilities, Maintenance and Repairs, Property Management Fee, Janitorial Services, Security Services, Administrative Expenses, Marketing and Leasing Commissions
+				* Total Operating Expenses: `$`2,852,250
+				</textarea>
+			</section>
+
+			<section data-markdown >
+				<textarea data-template>
+				## Net Operating Income (NOI)
+				* TEGI − Total Operating Expenses= `$`8,350,000 − `$`2,852,250 = `$`5,497,750
+				
+				</textarea>
+			</section>
+			
+			<section data-markdown >
+				<textarea data-template>
+				## Debt Service
+				* Loan Details
+					- Loan Amount: `$`60,000,000
+					- Interest Rate: 4.5% fixed
+					- Amortization Period: 30 years
+				* Annual Debt Service
+					- Monthly Payment ≈ `$`303,368
+					- Annual Debt Service = `$`303,368 × 12 = `$`3,640,416
+				* Cash Flow Before Taxes
+					- NOI − Annual Debt Service = `$`5,497,750 − `$`3,640,416 = `$`1,857,334
+				</textarea>
+			</section>
+			
+			<section data-markdown >
+				<textarea data-template>
+				## Return Metrics
+				1. Capitalization Rate (Cap Rate)
+					- Assumed Purchase Price: $80,000,000
+					- NOI ÷ Purchase Price = `$`5,497,750 ÷ `$`80,000,000 = 6.87%
+
+				2. Cash-on-Cash Return
+					- Equity Investment: (Assuming 25% down payment)
+					- 25% × `$`80,000,000 = `$`20,000,000
+					- Cash Flow Before Taxes ÷ Equity Investment = `$`1,857,334 ÷ `$`20,000,000 = 9.29%
+
+				3. Debt Service Coverage Ratio (DSCR)
+					- NOI ÷ Annual Debt Service= `$`5,497,750 ÷ `$`3,640,416 = 1.51
+				</textarea>
+			</section>
+
+			<section data-markdown >
+				<textarea data-template>
+				## Cash Flows, assuming sale at Y7
+				
+				<img src='imgs/proforma.png' width="100%" />
+				
+				* Net sale proceeds:
+					- Estimated Sale Price, NOI for Year 8 (assuming continued 2% growth): `$`6,191,358 × 1.02 = `$`6,315,185
+					- Sale Price: NOI Year 8 ÷ Exit Cap Rate = `$`6,315,185 ÷ 6.5% = `$`97,926,693
+					- Deduct outstanding debt: Remaining mortgage `$`54,522,634
+				</textarea>
+			</section>
+
+
+			<section data-markdown >
+				<textarea data-template>
+				## Exit value<span class="subtitle"><br/>Basic valuation for equities: Dividend discount model / Gordon growth model</span>
 				* If we assume that CFs are an increasing perpetuity,
 					- and <emph>g</emph> is the long-run average growth rate and <emph>r</emph> is the required return for equity holders,
 				* then `$ \small V_0 = \sum^{\infty}_{t=1}D_t(1+r)^{-t} $`,
@@ -791,7 +875,9 @@
 					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
 					config: 'TeX-AMS_HTML-full',
 					// pass other options into `MathJax.Hub.Config()`
-					TeX: { Macros: { RR: "{\\bf R}" } }
+					TeX: { Macros: { RR: "{\\bf R}" } },
+					inlineMath: [['$','$'], ['\\(','\\)']],
+                                	processEscapes: true
 				},
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
